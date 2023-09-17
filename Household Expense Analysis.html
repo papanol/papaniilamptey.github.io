@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Household Expense Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">R PROJECT</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">HOME</a></li>
+						
+							
+						</ul>
+						<ul class="icons">
+							<li><a href="www.linkedin.com/in/papa-nii-odartei-lamptey-a69430125" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/papanol/Learning_Journey" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date"></span>
+									<h1>HOUSEHOLD EXPENSE ANALYSIS</h1>
+									<p>The objective of this project is to determine the impact of smoking and other personal attributes on expenses through linear and multilinear regression modeling.</p>
+								</header>
+								<ul class="actions special">
+									<li><a href="https://github.com/papanol/Learning_Journey/blob/main/Final%20Statistics%20Project.R" class="button">View Code</a></li>
+								</ul>
+								
+								<p> <strong> Scenario </strong><br />
+									Mr. John Hughes has been gathering data in an effort to comprehend how individual characteristics impact household spending. He collects information, on factors such, as age, gender, smoking habits, BMI, number of children, location, and ultimately their expenditures. </p>
+
+								<p><strong> Goal</strong> <br />
+									This project aims to determine the impact of smoking and other personal attributes on expenses through linear and multilinear regression modeling. Additionally, we aim to examine how factors, including age, smoking habits, BMI, gender, number of children, and region can influence household expenditures using multivariate linear regression.
+ </p>
+
+								<p> <strong> Data Overview </strong> <br /> 
+									<div class="image main"><img src="images/r data over.png" alt="" /></div>
+
+									The dataset named "MultiRegDataset.csv" holds data that Mr. John Hughes gathered regarding how personal attributes impact household expenses. It consists of 1355 observations (rows) and 7 features (columns) encompassing variables such as age, sex, BMI, children, smoker, region, and expenses.<br />
+
+                                    <strong>Dependent variable:</strong> Expenses <br />
+                                    <strong>Independent variables:</strong> Age, Sex, BMI, Children, Smoker, Region
+</p>
+								<p> <strong> Key Statistics</strong> <br />
+									<div class="image main"><img src="images/r data summary.png" alt="" /></div>
+									 </p>
+								<p> <strong> Expense Histogram</strong></p>
+									<div class="image main"><img src="images/r expense.png" alt="" /></div>
+									<p>The distribution of expenses appears to be positively skewed, as the tail of the histogram extends towards higher values. The mean is greater than the median. </p>
+
+								
+								<p> <strong>T-Test </strong> <br /> 
+									<strong>Hypothesis Statement</strong><br />
+									<strong>Null hypothesis H₀:</strong> μexpenses= 15000<br />
+									The mean for expenses is equal to 15000<br />
+									
+									<strong>Alternative hypothesis Ha: </strong>μexpenses ≠ 15000 <br />
+									The mean for expenses is not equal to  15000
+									<div class="image main"><img src="images/r t test.png" alt="" /></div>
+
+									The one-sample t-test has a p-value of 2.092e-06 which is less than the significance level of 0.05. This gives us evidence to reject the null hypothesis that the mean for expenses is equal to $15000.
+
+
+									
+								</p>
+
+								<p> <strong> Linear Regression</strong> <br />
+								
+									The simple linear regression model for predicting household expenses (Y) based on smoking behavior (X) can be represented as:
+									<strong>Expenses=-15451.0+23871.0×Smoker+ϵ</strong> <br />
+
+									<strong>Correlation: 0.79042120 </strong> <br />
+								A correlation 0.79042120 suggests a strong linear connection, between smoker and expenses. When the predictor variable values increase it suggests that the response variable values also tend to increase.
+
+								</p>
+								<p> <strong> Linear Regression Model </strong></p>
+								<div class="image main"><img src="images/r lr smoker.png" width="300" height="300" alt="" /></div>
+								<p><strong>Residual Standard error: 7528</strong>
+									This indicates the average  difference between the actual  stock return and the predicted stock return<br />
+									<strong>Adjusted R-squared:0.6245</strong><br />
+									<strong>F-statistic : 2251</strong><br />
+									<strong>P-value : < 2.2e-16</strong><br />
+									The F statistic examines the significance of the regression model. When the p value is low (<0.001) it suggests that least one of the predictors has a relationship, with the response variable. In this case the p value is extremely small indicating evidence that the model's effective, in forecasting expenses.
+									
+								<p> <strong> Multilinear Regression Model </strong></p>
+								
+								<div class="image main"><img src="images/r ml h.png" width="300" height="300" alt="" /></div>
+								<p> The multiple linear regression model for predicting household expenses (Y) based on multiple independent variables (X1​, X2​, ...,Xp​) can be represented as:<br/>
+
+									<strong>Expenses = β0​ + β1 ​× Age + β2 × Sex + β3 × BMI + β4 × Children + β5 × Smoker +β6 x Region</strong><br />
+									<strong>Expenses = -35490.12 + 260.14​× Age + -60.37× Sex +331.32× BMI + 459.34× Children + 23988.18× Smoker +-345.20 x Region</strong><br />
+									
+									<strong>Intercept: -35490.12 </strong><br />
+									The average household expenses are estimated when all other factors are 0
+									
+									
+									
+								</p>
+								<p> <strong> MultiLinear Regression </strong></p>
+								<div class="image main"><img src="images/r ml r2.png" width="500" height="450" alt="" /></div>
+								<p><strong>Residual Standard error: 6112</strong><br />
+									This indicates the average  difference between the actual  stock return and the predicted stock return<br />
+									<strong>R squared and Adjusted R-squared are 0.7535 and 0.7524</strong> respectively.These metrics provide insights, into how much of the difference in expenses can be attributed to the variables used in the model. In this case 75.36% of the variation, in expenses is accounted for by the model.<br />
+									<strong>F -statistic(686.4) and p-value(2.2e-16)</strong><br />
+									 The F statistic examines the significance of the model. The small p value (< 2.2e 16) indicates that at least one of the predictors has a relationship, with the response variable.
+									 <br/>
+									 <br />
+									The multivariate linear regression model indicates that factors such, as age whether a person smokes the number of children they have their location and their BMI are all statistically significant when it comes to expenses. Interestingly gender doesn't seem to have an impact on expenses once we take variables into account. This model helps us understand how each predictor influences predicted costs and sheds light on a portion of the variability, in expenses.
+									
+								</p>
+							
+								<p><strong> Recommendation</strong><br />
+									<strong>Simple Linear Regression (Smoker vs. Expenses):</strong><br/>
+									 The analysis shows a connection between smoking habits and household expenses. Smokers tend to have higher expenses as compared to non-smokers. The model explains about 62.48% of the difference in expenses and the p value for the smoker coefficient is zero confirming that this relationship is significant.<br />
+
+									 <strong>Multiple Linear Regression (All Variables vs. Expenses): </strong>In general factors such, as smoking habits, age, region,body mass index (BMI) and the number of children play a role in determining household expenses. The multiple regression model used in this study successfully explains around 75.36% of the differences in expenses suggesting that it has an ability to predict. These findings offer insights into understanding the factors that influence variations, in household spending.
+
+
+								</p>
+								<ul class="actions special">
+									<li><a href="https://github.com/papanol/Learning_Journey/blob/main/Final%20Statistics%20Project.R" class="button">View Code</a></li>
+								</ul>
+
+
+
+
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>
+								Oshawa, ON, Canada</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(289) 886-1691</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">papalamptey@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+						
+							<li><a href="www.linkedin.com/in/papa-nii-odartei-lamptey-a69430125" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/papanol/Learning_Journey" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+					
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

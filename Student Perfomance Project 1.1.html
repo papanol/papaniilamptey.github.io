@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Student Performance Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">PYTHON PROJECT</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">HOME</a></li>
+						
+							
+						</ul>
+						<ul class="icons">
+							<li><a href="www.linkedin.com/in/papa-nii-odartei-lamptey-a69430125" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/papanol/Learning_Journey" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date"></span>
+									<h1>STUDENT PERFORMANCE PROJECT</h1>
+									<p>The goal of this project is to test and analyze 3 different models that is Naive Bayes, Neural Networks and Logistic Regression in the quest to find the model to predict a students change in standardized score after training</p>
+								</header>
+								<ul class="actions special">
+									<li><a href="https://github.com/papanol/Learning_Journey/blob/main/STUDENT%20PERFORMANCE%20PROJECT%20.ipynb" class="button">View Code</a></li>
+								</ul>
+								
+								<p> <strong> Scenario </strong><br />
+									Mr. John Hughes is currently searching for the model to accurately predict the extent of a students improvement, in standardized scores following training. </p>
+								<p><strong> Goal</strong> <br />
+									The goal of this project is to test and analyze 3 different models that is Naive Bayes, Neural Networks and Logistic Regression in the quest to find the model to predict a students  change in standardized score after training </p>
+
+								<p> <strong> Data Overview </strong> <br /> 
+									<div class="image main"><img src="images/key statistics.png" alt="" /></div>
+
+									The dataset contains information on 60 observations, each representing a different case in a study.The dataset studentperf has 6 columns and 61 rows.<br />
+                                    <strong>Dependent variable:</strong> Outcome <br />
+                                    <strong>Independent variables:</strong> Method, satis, time, ability, prvperf
+</p>
+								<p> <strong> Key Statistics</strong> <br />
+									<div class="image main"><img src="images/key stats.png" alt="" /></div>
+									 </p>
+								<p> <strong> Correlation Matrix</strong></p>
+									<div class="image main"><img src="images/correlation matrix.png" alt="" /></div>
+									<p>There is a weak positive correlation between the independent variables, with the strongest being 0.53 for ability and method.<br />There is negligible negative correlation between the independent variables with -0.36 for method and prvperf
+										</p>
+
+								
+								<p> <strong>Pairplot Chart </strong></p>
+								<div class="image main"><img src="images/pairplot.png" alt="" /></div>
+								<p>The scatter plots do not follow any particular diagonal trend which indicates that there is little or no correlation <br />
+								There are little or few outliers which are data points that lie far away from the main cluster of points in the scatter plots.
+									</p>
+
+								<p> <strong> Classificaion Matrix </strong></p>
+								<p> <strong> Naive Bayes </strong></p>
+								<div class="image main"><img src="images/nb cm.png" width="300" height="300" alt="" /></div>
+								<p>The confusion matrix shows the number of true positive (5), false positive (2), true negative (3), and false negative (2) predictions made by the Naive Bayes on the test data.
+								</p>
+								<p> <strong> Neural Networks </strong></p>
+								
+								<div class="image main"><img src="images/nn cm.png" width="300" height="300" alt="" /></div>
+								<p> The confusion matrix shows the number of true positive (5), false positive (2), true negative (1), and false negative (4) predictions made by the neural network on the test data.
+								</p>
+								<p> <strong> Logistic Regression </strong></p>
+								<div class="image main"><img src="images/lr cm.png" width="300" height="300" alt="" /></div>
+								<p>The confusion matrix shows the number of true positive (4), false positive (3), true negative (3), and false negative (2) predictions made by the logistic regression on the test data.
+								</p>
+								<p><strong>Classification Matrix insights</strong><br />
+									<strong>Neural Network</strong> <br />
+									For class 0, the F1-score is 0.63, and for class 1, it is 0.25. A higher F1-score indicates a better balance between precision and recall.
+								Accuracy: The accuracy of the neural network on the test data is 0.50, meaning it correctly predicted 50% of the instances. <br />
+								<strong>Naive Bayes</strong> <br/>
+								For class 0, the F1-score is 0.67, and for class 1, it is 0.44. A higher F1-score indicates a better balance between precision and recall.
+								Accuracy: The accuracy of the Naive Bayes classifier on the test data is 0.58, meaning it correctly predicted 58% of the instances.<br />
+								<strong> Logistic Regression</strong> <br/>
+								For class 0, the F1-score is 0.57, and for class 1, it is 0.40. A higher F1-score indicates a better balance between precision and recall.
+								Accuracy: The accuracy of the Logistic regression classifier on the test data is 0.50, meaning it correctly predicted 50% of the instances.
+
+								</p>
+								<p><strong> Recommendation</strong><br />
+									The Model I recommend for the dataset is the Naive Bayes model. This model has the highest f1 score of 0.67 amongst the lot.The F1-score is the harmonic mean of precision and recall. It provides a balance between precision and recall, making it a useful metric when there is an uneven class distribution or when both false positives and false negatives are equally important.
+									Also the Naive Bayes has the highest accuracy of 0.58  which  represents the proportion of correctly classified instances (both true positives and true negatives) out of the total number of instances.
+								</p>
+								<ul class="actions special">
+									<li><a href="https://github.com/papanol/Learning_Journey/blob/main/STUDENT%20PERFORMANCE%20PROJECT%20.ipynb" class="button">View Code</a></li>
+								</ul>
+
+
+
+
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>
+								Oshawa, ON, Canada</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(289) 886-1691</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">papalamptey@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+						
+							<li><a href="www.linkedin.com/in/papa-nii-odartei-lamptey-a69430125" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/papanol/Learning_Journey" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+					
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
